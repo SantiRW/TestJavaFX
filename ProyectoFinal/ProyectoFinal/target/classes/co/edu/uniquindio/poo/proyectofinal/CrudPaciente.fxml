@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.poo.proyectofinal.controller.CrudPacientesController">
+    <top>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <HBox spacing="10">
+                <Label text="Nombre:"/>
+                <TextField fx:id="txtNombre"/>
+                <Label text="Cédula:"/>
+                <TextField fx:id="txtCedula"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Edad:"/>
+                <TextField fx:id="txtEdad"/>
+                <Label text="Correo:"/>
+                <TextField fx:id="txtCorreo"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Acción:"/>
+                <ComboBox fx:id="comboAccion"/>
+                <Button text="Ejecutar" onAction="#ejecutarAccion"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tablaPacientes">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre"/>
+                <TableColumn fx:id="colCedula" text="Cédula"/>
+                <TableColumn fx:id="colEdad" text="Edad"/>
+                <TableColumn fx:id="colCorreo" text="Correo"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
